@@ -38,6 +38,21 @@ android {
         kotlinCompilerExtensionVersion compose_version
         kotlinCompilerVersion '1.4.30'
     }
+
+    kotlin.sourceSets.all {
+        languageSettings {
+            useExperimentalAnnotation("androidx.compose.animation.ExperimentalAnimationApi")
+            useExperimentalAnnotation("androidx.compose.foundation.ExperimentalFoundationApi")
+            useExperimentalAnnotation("androidx.compose.material.ExperimentalMaterialApi")
+            useExperimentalAnnotation("androidx.compose.runtime.savedinstancestate.ExperimentalRestorableStateHolder")
+            useExperimentalAnnotation("androidx.compose.ui.focus.ExperimentalFocus")
+            useExperimentalAnnotation("androidx.compose.ui.input.key.ExperimentalKeyInput")
+            useExperimentalAnnotation("androidx.compose.material.ripple.ExperimentalRippleApi")
+            useExperimentalAnnotation("kotlin.RequiresOptIn")
+            useExperimentalAnnotation("kotlin.ExperimentalStdlibApi")
+            useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
+        }
+    }
 }
 
 dependencies {
